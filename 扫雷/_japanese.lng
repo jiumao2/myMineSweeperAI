@@ -1,0 +1,515 @@
+;This is the Minesweeper Arbiter 0.43 demo2 Language File
+;Language name: Japanese
+;Language ID: 
+;Translator: Yuuki Nakagiri
+;Last Modified: 01:59 09.11.2009(JST)
+;File Version: 
+;Total Entries: 
+;current task - group all entries!
+;
+;Rules
+;lines that starts with ";" "/" "[" ignored
+;lines with length < 3 ignored
+;lines without "=" ignored
+;lines with unknown command like xxxx=<text> ignored
+;lines with empty value like 0000=<empty> ignored too
+;any other wrong lines ignored as well
+;missed text lines are replaced with default
+;-----
+;If you want to translate program to YOUR language:
+;1) translate ONLY TEXT LINES like xxxx=<text>
+;2) rename file as "_<your_language_name>.lng"
+;3) for further understanding you may mark 
+;   default values with ";" symbol and 
+;   lower/upper write command on your language
+;4) please, note - your strings are limited with control's width!!!
+;5) be sure all the translated text is visible
+;6) send file to the Minesweeper Arbiter development staff
+;7) get YOUR NAME in the translation team list
+;
+;   thank you!
+;-------------
+[global]
+0357=If you wish to translate program to Your language, please, see instructions inside the language file.
+
+[lhs_gain]
+;0007=game win at
+0383=Save Table
+;0383=保存
+0384=Congratulations with
+0385=score
+
+[functions_unit]
+;0008=sec
+;0008=秒
+;0009=blast
+;0010=godmode .. on .. awakening!
+
+[multiplayer unit]
+0011=Cannot connect
+;0011=接続できません
+0012=Port
+0013=Name
+0014=IP
+0015=Host Session
+0016=Connect
+;0016=接続
+0017=Disconnect
+;0017=切断
+0018=joined
+0019=Multiplayer Mod
+
+[progressbar]
+0020=動画再生コントロールバー
+
+[about]
+0021=about
+
+[counters]
+0022=左
+0023=右
+0024=両
+0025=3BV
+;done-->
+0026=/
+0027=3BV/s
+0028=Time
+0029=動画ファイルにセーブする
+0030=SAVED
+
+[custommode]
+0031=カスタム設定
+0032=横
+;0032=Width
+0033=縦
+;0033=Height
+0034=地雷
+;0034=Mines
+0035=キャンセル
+0036=適用
+
+;0295=セーブ
+0295=Save
+;0296=ロード
+0296=Load
+0297=削除
+
+
+;0037=初期値
+0037=Default values:
+0038=8 x 8 , 10 mines
+0039=16 x 16 , 40 mines
+0040=30 x 16 , 99 mines
+0041=custom mode dismissed
+0042=Board width value must be in interval 8..30
+0043=Board height value must be in interval 8..30
+0044=Board mines value must be in interval 1..90% of board capacity
+;0045=custom mode selected
+
+[debug]
+0046=Debug Protocol
+0047=Clear
+0048=Save
+0049=Font
+0050=Command [Enter]
+0051=Close
+;0052=protocol cleared
+;0053=protocol save ok
+;0054=protocol save error
+
+[debug_command]
+0055=Debug Command
+
+[history_window]
+0056=統計
+0057=SAVE GRID
+0058=Save Full Statistics to HTML-file
+0260=Save Statistics (no debug) to HTML-file
+0059=Backup History
+0060=Restore History
+0061=Clear History
+0062=初級
+0063=タイム順
+0064=3BV/s順
+0065=タイム集計
+0066=3BV/s集計
+0067=3BV集計
+0068=スタイルチャート
+0262=スタイルチャート
+0407=更新履歴
+0400=日別集計
+0069=中級
+0070=上級
+0071=レベルチャート
+0263=Overall Games Chart
+0072=活動履歴
+0073=全履歴
+0074=セットアップ
+0275=検索
+0075=Beginner Review
+0076=Beginner Top Time
+0077=Beginner Top 3BV/s
+0078=Beginner Times Review
+0079=Beginner 3BV/s Review
+0080=Beginner 3BV Review
+0404=Beginner Evolution
+0401=Beginner Daily Review
+0081=Beginner Style Chart
+0082=Intermediate Review
+0083=Intermediate Top Time
+0084=Intermediate Top 3BV/s
+0085=Intermediate Times Review
+0086=Intermediate 3BV/s Review
+0087=Intermediate 3BV Review
+0405=Intermediate Evolution
+0402=Intermediate Daily Review
+0088=Intermediate Style Chart
+0089=Expert Review
+0090=Expert Top Time
+0091=Expert Top 3BV/s
+0092=Expert Times Review
+0093=Expert 3BV/s Review
+0094=Expert 3BV Review
+0406=Expert Evolution
+0403=Expert Daily Review
+0095=Expert Style Chart
+0096=Overall Style Chart
+0097=Total Activity
+0098=Entire Statistics (debug info)
+0099=Flag-style
+0000=NF-style
+0101=File copy error
+0102=Backup file:
+0103=This will delete ALL the history entries. Are you sure?
+0104=In order to draw correctly the chart-pie, if values are equal, one of them is incremented by 1
+0106=Not history file / file corrupted
+0107=History file restored. Please, reopen statistics window
+0108=History is empty. You need to win a game first :-)
+
+[local_high_scores]
+0109=ハイスコア
+
+[options]
+0119=ゲームの設定
+;0120=初期値に戻す
+0120=Default
+0121=キャンセル
+0122=適用
+0123=プレイヤー
+;0123=Player
+0124=ゲームスタイル
+;0124=Game Style
+0125=いかさまモード
+;0125=Cheat Mode
+0126=システム
+;0126=System
+0127=言語
+;0127=Language
+0128=自動録画
+;0128=Automation
+0129=マルチプレイヤー
+;0129=Multiplayer
+;0130=プレイヤー設定
+0130=Player Setup
+0131=Game Style Setup
+0132=Cheat Mode Setup
+0133=System Setup
+0134=Language Setup
+0135=Automation Setup
+0136=Multiplayer Setup
+
+0310=Counter Setup
+0331=IRC Script Setup
+0359=Replay Mouse Chart Setup
+
+0137=プレイヤー識別テキストを表示する
+;0252=動画ファイルのプレイヤー名
+0252=Replay Player Name
+;0254=デフォルトの動画ファイル名
+0254=Default Replay File Name
+;0253=国名
+0253=Country
+;0255=動画ファイルのモード名
+0255=Mode Names
+0138=プレイ履歴を記録する (推奨)
+;0139=起動時のモード
+0139=Startup Mode:
+0140=初級
+0141=中級
+0142=上級
+;0143=スキン
+0143=Skin
+;0144=タイマースキン
+0144=Timer Skin
+0145=「?」マークを使用 (非推奨)
+0146=タイマーに小数第2位まで表示
+0147=カウンターウィンドウを表示
+0148=左ダブルクリックで盤面をクリア (非推奨)
+0149=3BV達成率が(以下の値)%までに地雷を踏んだら盤面をクリア (推奨)
+0150=中クリックで盤面をクリア
+0265=コンプリート時にすべての地雷の上に旗を置く
+0151=タイマーを無効にする
+0152=0秒(0.00秒)からタイマーがスタートする
+0153=ゲーム開始時に旗がすべてセットされる
+0154=両クリックによって数字の周囲が開くのを無効にする
+0155=右クリックを無効にする
+0156=踏んでも死なない
+0157=クリック長押しで地雷かどうか表示する
+0158=ゲームプレイ中に盤面の3BVを表示する
+0159=盤面に必ず7を含む
+0160=盤面に必ず8を含む
+
+0161=最大3BV
+0356=最小3BV
+
+;0162=×1000回試行する
+0162=Attempts 1000 *
+0163=プロセス優先度を「高」にする (推奨)
+0266=盤面の描画にBitBltを使用 (推奨)
+0164=「ボスが来た」キー[Alt+F2]を有効にする
+0165=マウスカーソルを盤面の外に出さない
+0166=常に手前に表示
+0167=複数起動を抑止する
+;0168=ゲーム画面を中央に移動する
+0168=Justify Arbiter Windows by Center
+;0169=Register Arbiter Video File (AVF) の関連付けを行う
+0169=Register Arbiter Video File (AVF) Extension
+;0170=デスクトップにショートカットを置く
+0170=Put Shortcut to the Desktop
+;0171=言語ファイルを選択して下さい
+0171=Please, Select Your Language
+0172=自動録画を行う (推奨)
+;0175=以下のオプションは自己責任で使用してください!
+0175=Check These Options on Your Own Risk !
+0176=Block Incoming Chat Messages
+0177=Allow List of Processes Grab
+0178=Allow System Information Grab
+0179=You could not save replay files in Cheat Mode
+0180=Please, read the Readme file for more automatic saving template explanations
+
+[functions]
+;0276=クリア
+0276=CLEAR
+;0277=並び替え
+0277=SORT BY
+0181=AVF extension registration done
+0182=Registry Access Failure
+0183=History file manual corruption detected
+0184=History file recreated
+0185=History file corrupted. File has been renamed to "history_corrupt_<date>.dat"
+;0186=初級
+0186=Beg
+;0187=中級
+0187=Int
+;0188=上級
+0188=Exp
+0189=All
+0190=Avg
+0191=Value
+;0192=日付
+0192=Date
+;0193=時刻
+0193=Hour
+0261=Week
+0264=Month
+0194=3BV
+0195=3BV/s
+;0196=タイム
+0196=Time
+0197=Games Total
+;0198=旗あり
+0198=Flag
+;0199=旗なし
+0199=Non-Flag
+0200=Full Time
+0201=Best  Time
+0202=Avg   Time
+0203=Worst Time
+0204=Best  3BV/s
+0205=Avg   3BV/s
+0206=Worst 3BV/s
+0207=Best  3BV
+0208=Avg   3BV
+0209=Worst 3BV
+0210=Style
+0211=Total
+0212=3BV/s Min
+0213=3BV/s Max
+0214=3BV/s Avg
+0215=3BV Min
+0216=3BV Avg
+0217=3BV Max
+0218=Time Min
+0219=Time Avg
+0220=Time Max
+0221=Percents
+0222=Games
+0223=Total Time
+0224=Mode
+0225=Both
+
+[main_window]
+0226=ゲーム
+0227=新規
+0408=再プレイ
+0228=動画再生
+0229=マルチプレイヤー
+;0230=初級
+0230=Beginner
+;0231=中級
+0231=Intermediate
+;0232=上級
+0232=Expert
+0233=カスタム
+0234=ハイスコア
+0235=統計
+0236=「ボスが来た」キー
+0237=終了
+0238=設定
+0239=ゲーム設定
+0241=言語
+0242=デバッグプロトコルを表示
+0243=カウンターを表示
+0267=IRCアドオン
+0268=最終ゲーム情報をコピー
+
+0274=指定したゲーム番号の情報をコピー
+0244=スクリーンショット
+0245=JPGで保存する
+0246=BMPで保存する
+0247=フルスクリーンショットの作成
+0248=コミュニティ
+0249=ヘルプ
+0250=ヘルプファイル
+0251=Minesweeper Arbiterについて
+
+0278=Sorting in large tables may be slow
+0279=Table contains more than 1000 rows, and sorting may take a few minutes. Continue?
+0280=Load External History File (.DAT or .INF)
+0281=External History File Load Success
+
+0282=統計表にタイ記録を表示する
+
+0283=マウス設定
+0284=マウス速度を速く
+0285=マウス速度を遅く
+0286=マウス速度
+0287=マウスのプロパティを開く
+
+0288=ゲームプレイ中に地雷の位置を表示
+
+0289=File not selected
+0290=Cannot save file
+0291=Cannot load file
+0292=Cannot create folder
+0293=Cannot load folder
+0294=Delete file
+
+0298=カスタム盤面の保存
+0299=カスタム盤面の読込
+
+0300=起動時にプラグインを探す (遅くなる)
+0303=プラグイン
+
+
+0304=フォルダを開く
+0305=ゲームフォルダ
+0306=スクリーンショットフォルダ
+0307=盤面フォルダ
+0308=盤面初期セットフォルダ
+0309=プラグインフォルダ
+
+0311=Rows Widths
+0312=Counter Indicators Template
+0313=Read the Help file about the Counter Window Indicator's templates
+
+0314=カウンターウィンドウにタイトルを表示
+
+0315=カウンター
+0316=Counters
+
+0317=Add Formula
+
+[formula builder]
+0318=Counter Indicator Template Formula Builder
+0319=Help
+0322=Clear
+0323=Undo
+0324=Indicator Name
+0326=Formula Operations
+0327=# - Text
+0328=@ - Previous Formula
+
+0329=Save template file first?
+
+0240=Board saved to
+
+0332=Format
+0333=Colors
+0334=失敗ゲームの情報を自動コピー
+0335=コンプリートゲームの情報を自動コピー
+0336=以下のリストにある指標を除外する
+
+0337=Copy Information
+0338=動画プレビュー
+
+0339=盤面だけをBMPで保存
+0340=盤面だけをTXTで保存
+
+0341=flagging
+0342=no-flagging
+
+0343=th
+0344=st
+0345=nd
+0346=rd
+
+0347=タイム記録情報をコピー
+0348=3BV/s記録情報をコピー
+0349=平均記録情報をコピー
+0350=今日の初級プレイ情報をコピー
+0351=今日の中級プレイ情報をコピー
+0352=今日の上級プレイ情報をコピー
+0353=IRCテキストフォーマット
+
+0354=ゲームコンプリート時に緑枠で囲う
+0355=プレイ中にタイマーがカウントされる
+
+0358=マウスチャートを描画
+
+0360=暗めの盤面スキンを使用
+0361=マスを表示
+0362=マウスカーソルの軌跡を表示
+0363=ボタンをクリックしながら移動した軌跡をハイライト表示
+0364=左クリックを表示
+0365=右クリックを表示
+0366=両クリックを表示
+;0367=マウスカーソルの軌跡の表示色
+0367=Mouse Cursor Path Color
+0368=Left Clicks Color
+0369=Right Clicks Color
+0370=Double Clicks Color
+
+0371=再読み込み
+;0371=Reload Page
+0372=タイマーが以下の数字を超えたらそのゲームを終わらせる(最小値:3/15/50)
+0373=タイマーが以下の数字を超えたらビープを鳴らす (同上)
+
+0374=盤面のレイアウトを変更する
+
+0375=Silent Mode Output
+
+0376=Fill
+
+0377=小数点として「,」（カンマ）ではなく「.」（ピリオド）を使用する
+
+0378=Number of Indices
+;0378=指標数
+
+0379=ゲームコンプリート時にカウンターを表示
+0380=ゲーム終了時にカウンターを表示
+
+0381=IRCレポートにランダムなスマイルマークを使用
+
+0382=プレイ中にもリアルタイムでカウンターの再計算を行う
+;end of file

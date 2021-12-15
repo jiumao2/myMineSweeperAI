@@ -1,0 +1,466 @@
+;This is the Minesweeper Arbiter 0.43 demo2 Language File
+;Language name: English (default)
+;Language ID: ENG
+;Translator: Dmitriy I. Sukhomlynov (Ukraine)
+;Last Modified: 2:51 28.11.2005
+;File Version: 1.24.DEBUG
+;Total Entries: 4xx (374)
+;current task - group all entries!
+;
+;Rules
+;lines that starts with ";" "/" "[" ignored
+;lines with length < 3 ignored
+;lines without "=" ignored
+;lines with unknown command like xxxx=<text> ignored
+;lines with empty value like 0000=<empty> ignored too
+;any other wrong lines ignored as well
+;missed text lines are replaced with default
+;-----
+;If you want to translate program to YOUR language:
+;1) translate ONLY TEXT LINES like xxxx=<text>
+;2) rename file as "_<your_language_name>.lng"
+;3) for further understanding you may mark 
+;   default values with ";" symbol and 
+;   lower/upper write command on your language
+;4) please, note - your strings are limited with control's width!!!
+;5) be sure all the translated text is visible
+;6) send file to the Minesweeper Arbiter development staff
+;7) get YOUR NAME in the translation team list
+;
+;   thank you!
+;-------------
+[global]
+0357=If you wish to translate program to Your language, please, see instructions inside the language file.
+
+[lhs_gain]
+;0007=game win at
+0383=Save Table
+0384=Congratulations with
+0385=score
+
+[functions_unit]
+;0008=sec
+;0009=blast
+;0010=godmode .. on .. awakening!
+
+[multiplayer unit]
+0011=Cannot connect
+0012=Port
+0013=Name
+0014=IP
+0015=Host Session
+0016=Connect
+0017=Disconnect
+0018=joined
+0019=Multiplayer Mod
+
+[progressbar]
+0020=Replay Progress Control Bar
+
+[about]
+0021=about
+
+[counters]
+0022=L
+0023=R
+0024=D
+0025=3BV
+;done-->
+0026=/
+0027=3BV/s
+0028=Time
+0029=Save Replay File
+0030=SAVED
+
+[custommode]
+0031=Custom Board Setup
+0032=Width
+0033=Height
+0034=Mines
+0035=Cancel
+0036=Apply
+
+0295=Save
+0296=Load
+0297=Delete
+
+
+0037=Default values:
+0038=8 x 8 , 10 mines
+0039=16 x 16 , 40 mines
+0040=30 x 16 , 99 mines
+0041=custom mode dismissed
+0042=Board width value must be in interval 8..30
+0043=Board height value must be in interval 8..30
+0044=Board mines value must be in interval 1..90% of board capacity
+;0045=custom mode selected
+
+[debug]
+0046=Debug Protocol
+0047=Clear
+0048=Save
+0049=Font
+0050=Command [Enter]
+0051=Close
+;0052=protocol cleared
+;0053=protocol save ok
+;0054=protocol save error
+
+[debug_command]
+0055=Debug Command
+
+[history_window]
+0056=Statistics
+0057=SAVE GRID
+0058=Save Full Statistics to HTML-file
+0260=Save Statistics (no debug) to HTML-file
+0059=Backup History
+0060=Restore History
+0061=Clear History
+0062=Beginner
+0063=Top Time
+0064=Top 3BV/s
+0065=Times Review
+0066=3BV/s Review
+0067=3BV Review
+0068=Style Chart
+0262=Games Chart
+0407=Evolution
+0400=Daily Stats
+0069=Intermediate
+0070=Expert
+0071=Style Chart
+0263=Overall Games Chart
+0072=Activity
+0073=Entire
+0074=Setup
+0275=Search
+0075=Beginner Review
+0076=Beginner Top Time
+0077=Beginner Top 3BV/s
+0078=Beginner Times Review
+0079=Beginner 3BV/s Review
+0080=Beginner 3BV Review
+0404=Beginner Evolution
+0401=Beginner Daily Review
+0081=Beginner Style Chart
+0082=Intermediate Review
+0083=Intermediate Top Time
+0084=Intermediate Top 3BV/s
+0085=Intermediate Times Review
+0086=Intermediate 3BV/s Review
+0087=Intermediate 3BV Review
+0405=Intermediate Evolution
+0402=Intermediate Daily Review
+0088=Intermediate Style Chart
+0089=Expert Review
+0090=Expert Top Time
+0091=Expert Top 3BV/s
+0092=Expert Times Review
+0093=Expert 3BV/s Review
+0094=Expert 3BV Review
+0406=Expert Evolution
+0403=Expert Daily Review
+0095=Expert Style Chart
+0096=Overall Style Chart
+0097=Total Activity
+0098=Entire Statistics (debug info)
+0099=Flag-style
+0000=NF-style
+0101=File copy error
+0102=Backup file:
+0103=This will delete ALL the history entries. Are you sure?
+0104=In order to draw correctly the chart-pie, if values are equal, one of them is incremented by 1
+0106=Not history file / file corrupted
+0107=History file restored. Please, reopen statistics window
+0108=History is empty. You need to win a game first :-)
+
+[local_high_scores]
+0109=Local High Scores
+
+[options]
+0119=Preferences
+0120=Default
+0121=Cancel
+0122=Apply
+0123=Player
+0124=Game Style
+0125=Cheat Mode
+0126=System
+0127=Language
+0128=Automation
+0129=Multiplayer
+0130=Player Setup
+0131=Game Style Setup
+0132=Cheat Mode Setup
+0133=System Setup
+0134=Language Setup
+0135=Automation Setup
+0136=Multiplayer Setup
+
+0310=Counter Setup
+0331=IRC Script Setup
+0359=Replay Mouse Chart Setup
+
+0137=Show Player Identification Text
+0252=Replay Player Name
+0254=Default Replay File Name
+0253=Country
+0255=Mode Names
+0138=Game History Log (Recommended)
+0139=Startup Mode:
+0140=Beg
+0141=Int
+0142=Exp
+0143=Skin
+0144=Timer Skin
+0145=Marks (?) (Not Recommended)
+0146=Tenths and Hundredths in Timer
+0147=Show Counters Window
+0148=Board Clearance on Left Mouse DoubleClick (Not Recommended)
+0149=Board Clearance on Fail (Recommended)
+0150=Board Clearance on Middle Mouse Click
+0265=Fill Finished Board with Flags
+0151=Disable Timer
+0152=Recorder Style Timer
+0153=Auto Flag Set at the Game Start
+0154=Disable Group Auto Open on DoubleClick
+0155=Disable Right Mouse Clicks
+0156=Infinite Lives
+0157=Show Mines Presence Probabilities
+0158=Show 3BV After Game Start
+0159=Board Must Have 7
+0160=Board Must have 8
+
+0161=3BV <=
+0356=3BV >=
+
+0162=Attempts 1000 *
+0163=Set High Process Priority (Recommended)
+0266=Use BitBlt to Draw Board (Recommended)
+0164=Enable Boss-key [Alt+F2]
+0165=Clip Cursor to the Board
+0166=Always on Top
+0167=Prohibit Multiple Instances
+0168=Justify Arbiter Windows by Center
+0169=Register Arbiter Video File (AVF) Extension
+0170=Put Shortcut to the Desktop
+0171=Please, Select Your Language
+0172=Automatical Replay Saving (Recommended)
+0175=Check These Options on Your Own Risk !
+0176=Block Incoming Chat Messages
+0177=Allow List of Processes Grab
+0178=Allow System Information Grab
+0179=You could not save replay files in Cheat Mode
+0180=Please, read the Readme file for more automatic saving template explanations
+
+[functions]
+0276=CLEAR
+0277=SORT BY
+0181=AVF extension registration done
+0182=Registry Access Failure
+0183=History file manual corruption detected
+0184=History file recreated
+0185=History file corrupted. File has been renamed to "history_corrupt_<date>.dat"
+0186=Beg
+0187=Int
+0188=Exp
+0189=All
+0190=Avg
+0191=Value
+0192=Date
+0193=Hour
+0261=Week
+0264=Month
+0194=3BV
+0195=3BV/s
+0196=Time
+0197=Games Total
+0198=Flag
+0199=Non-Flag
+0200=Full Time
+0201=Best  Time
+0202=Avg   Time
+0203=Worst Time
+0204=Best  3BV/s
+0205=Avg   3BV/s
+0206=Worst 3BV/s
+0207=Best  3BV
+0208=Avg   3BV
+0209=Worst 3BV
+0210=Style
+0211=Total
+0212=3BV/s Min
+0213=3BV/s Max
+0214=3BV/s Avg
+0215=3BV Min
+0216=3BV Avg
+0217=3BV Max
+0218=Time Min
+0219=Time Avg
+0220=Time Max
+0221=Percents
+0222=Games
+0223=Total Time
+0224=Mode
+0225=Both
+
+[main_window]
+0226=Game
+0227=New
+0408=Restart
+0228=Play Video
+0229=Multiplayer Mod
+0230=Beginner
+0231=Intermediate
+0232=Expert
+0233=Custom Board
+0234=Local High Scores
+0235=Statistics
+0236=Boss-Key
+0237=Exit
+0238=Options
+0239=Preferences
+0241=Language
+0242=Show Debug Protocol
+0243=Show Counters
+0267=IRC Addon
+0268=Copy Last Game Info
+
+0274=Copy Game Info by Number
+0244=Screenshot
+0245=Make JPG Screenshot
+0246=Make BMP Screenshot
+0247=Make FULL Screenshot
+0248=Community
+0249=?
+0250=Index
+0251=About
+
+0278=Sorting in large tables may be slow
+0279=Table contains more than 1000 rows, and sorting may take a few minutes. Continue?
+0280=Load External History File (.DAT or .INF)
+0281=External History File Load Success
+
+0282=Show Equals in Statistics Tables
+
+0283=Mouse Setup
+0284=Increase Sensitivity
+0285=Decrease Sensitivity
+0286=Mouse Speed
+0287=Open Mouse Control Panel
+
+0288=Show Mines Positions
+
+0289=File not selected
+0290=Cannot save file
+0291=Cannot load file
+0292=Cannot create folder
+0293=Cannot load folder
+0294=Delete file
+
+0298=Save Custom Board
+0299=Load Custom Board
+
+0300=Seek Plugins at Startup (May Be Slow)
+0303=Plugins
+
+
+0304=Open Folder
+0305=Game Folder
+0306=Screenshots Folder
+0307=Boards Folder
+0308=Board presets Folder
+0309=Plugins Folder
+
+0311=Rows Widths
+0312=Counter Indicators Template
+0313=Read the Help file about the Counter Window Indicator's templates
+
+0314=Show Counter Window's Title
+
+0315=Counters
+0316=Counters
+
+0317=Add Formula
+
+[formula builder]
+0318=Counter Indicator Template Formula Builder
+0319=Help
+0322=Clear
+0323=Undo
+0324=Indicator Name
+0326=Formula Operations
+0327=# - Text
+0328=@ - Previous Formula
+
+0329=Save template file first?
+
+0240=Board saved to
+
+0332=Format
+0333=Colors
+0334=Autocopying Blasted Games Info from Counters
+0335=Autocopying Finished Games Info from Counters
+0336=List of Excluded Counters Indicators
+
+0337=Copy Information
+0338=Preview Replay
+
+0339=Save Board as BMP
+0340=Save Board as TXT
+
+0341=flagging
+0342=no-flagging
+
+0343=th
+0344=st
+0345=nd
+0346=rd
+
+0347=Copy Time Records Info
+0348=Copy 3BV/s Records Info
+0349=Copy Averages Info
+0350=Copy Today's BEG Playing Info
+0351=Copy Today's INT Playing Info
+0352=Copy Today's EXP Playing Info
+0353=IRC Text Format
+
+0354=Green Color Notifier on Game Over
+0355=Show Timer While Game is Played
+
+0358=Draw Mouse Chart
+
+0360=Use Darken Board Skin
+0361=Show Cells
+0362=Show Mouse Cursor Path
+0363=Highlight Mouse Path When Buttons Pressed
+0364=Show Left Clicks
+0365=Show Right Clicks
+0366=Show Double Clicks
+0367=Mouse Cursor Path Color
+0368=Left Clicks Color
+0369=Right Clicks Color
+0370=Double Clicks Color
+
+0371=Reload Page
+0372=Force New Game Start by Timer
+0373=Beep if Time Exceeds Values
+
+0374=Change Board Layout
+
+0375=Silent Mode Output
+
+0376=Fill
+
+0377=Use Dot as Floating Point Separator
+
+0378=Number of Indices
+
+0379=Show Counters Window on Game Finish
+0380=Show Counters Window on Game End
+
+0381=Use Random Smiles in IRC Reports
+
+0382=Calculate Counters While Playing
+;end of file

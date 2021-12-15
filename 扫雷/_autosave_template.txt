@@ -1,0 +1,27 @@
+; this is default automatical replay saving template
+; for Minesweeper Arbiter
+; format is easy - lines comes in triples:
+; line1: conditions when saving needed
+; line2: replay file name template
+; line3: PATH=<folder>
+; 
+; triples containing first ";" ignored 
+; file is read exceptionally by triples
+;
+; TERMINAL means that if condition is met, 
+; remaining won't be applied
+;
+; available patterns:
+; <name> <mode> <time> <inttime> <completion> <3bv> <3bv/s> 
+; <obv> <obv/s> <gzini> <gzini/s> <hzini> <hzini/s> <ioe>
+; <hh> <min> <sec> <dd> <ddd> <mm> <mmm> <mmmm> <yy> <yyyy>
+; <style>
+mode=1 and time<10 and completion=100 TERMINAL
+<mode>_<style>_<time>_3BV=<3bv>_3BVs=<3bv/s>_<name>
+PATH=replays2
+mode=2 and time<50 and completion=100 TERMINAL
+<mode>_<style>_<time>_3BV=<3bv>_3BVs=<3bv/s>_<name>
+PATH=replays
+mode=3 and time<150 and completion=100 TERMINAL
+<mode>_<style>_<time>_3BV=<3bv>_3BVs=<3bv/s>_<name>
+PATH=replays

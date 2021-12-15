@@ -1,0 +1,15 @@
+18:16:32:140 preferences saved
+18:16:26:887 ---
+18:16:26:884 who of them got the skills to test me?
+18:16:26:881 ---
+18:16:26:879 warp field stabilized. opening gate to the minesweeper world
+18:16:26:877 encrypt_engine test ok
+18:16:26:876 encrypt_engine testing ...
+18:16:26:875 ---
+18:16:26:873 language  | 00000804
+18:16:26:871 timezone  | 中国标准时间 (GMT +8:00)
+18:16:26:869 platform  | Windows NT 6.2 build 9200, 
+18:16:26:867 memory    | 2047,0 of 2047,0 MB RAM free
+18:16:26:866 cpu speed | run the command get_cpu_speed
+18:16:26:865 date      | Wed, 15.12.2021, process 0x000309C2 launched
+18:16:26:855 path      | C:\USERS\JIUMAO\DESKTOP\PROJECTS\MYMINESWEEPERAI\扫雷\

@@ -1,0 +1,100 @@
+; this is default counter template for Minesweeper Arbiter 0.49.3
+; format is easy:
+; * left part of line before "|" is the indicator caption
+; * right part is a single formula
+; * if line is started with "#" then the formula part
+;   would be added like text to the formula part of
+;   previous indicator
+; * if line is started with "@" then the formula part
+;   would be added like a formula result to the formula part of
+;   previous indicator
+; * you can write up to 50 formulas. no sense to flood cpu more
+; * empty lines ignored
+; * lines that start with ";" are ignored
+; * lines that have wrong syntax are ignored too
+; ----------
+; *** header of template file ***
+; author: Dmitriy
+; template name: "default template"
+; language: English
+; version: 0.06
+;
+; *** begin of templates ***
+;
+;;; time
+; Time | TIME
+; realtime and +1 which are settings-independent:
+RTime | TIMEREAL{2} 
+#| (
+@| TIMEINT
+#|)
+;Score | TIMERECORDERSTYLE
+;;; estimate
+;Est |TIMEEST
+; settings-independent versions:
+Est RTime |TIMEESTREAL
+#| (
+@|TIMEESTINT
+#|)
+;Est Score |TIMEESTRECORDERSTYLE
+;;; board difficulty measures and correspoding speed
+; 3bv and Done 3bv in one indicator
+3BV|BBBVDONE
+#|/
+@|BBBV
+; 3bvs
+3BV/s|BBBVS
+ZiNi|GZINI
+#|@
+@|GZINI/TIMEESTREAL
+H.ZiNi|HZINI
+#|@
+@|HZINI/TIMEESTREAL
+Ops|OPENINGSDONE
+#|/
+@|OPENINGS
+Isls|ISLANDS
+;;; clicks
+Left |LCLK
+#|@
+@|LCLK/TIMEREAL
+Right |RCLK
+#|@
+@|RCLK/TIMEREAL
+Double |DCLK
+#|@
+@|DCLK/TIMEREAL
+Cl|TOTALCLK
+#|@
+@|TOTALCLK/TIMEREAL
+;;; efficiency measures
+IOE|BBBVDONE/TOTALCLK{3}
+ThrP|BBBVDONE/(TOTALEFF-MISFLAGS-UNFLAGS-MISUNFLAGS){3}
+Corr|(TOTALEFF-MISFLAGS-UNFLAGS-MISUNFLAGS)/TOTALCLK{3}
+; ZiNi efficiency
+ZNE|GZINI*BBBVDONE/(TOTALCLK*BBBV){3}
+HZNE|HZINI*BBBVDONE/(TOTALCLK*BBBV){3}
+; ZiNi throughput
+ZNT|GZINI*BBBVDONE/(TOTALEFF*BBBV){3}
+HZNT|HZINI*BBBVDONE/(TOTALEFF*BBBV){3}
+;;; path
+Path|PATH
+Flags|FLAGSUSED
+;;; magic indices
+; they're supposed to measure quality of the game
+RQP|RQP
+IOS|IOS
+;;; ranks of current game
+; number of game of this mode
+Ranks|RANKTIME
+#|/
+@|RANKBBBVS
+#| of 
+@|TOTALGAMES
+#| / 
+@|RPI
+#|%
+ios rank|RANKIOS
+rqp rank|RANKRQP
+; *** end of template file ***
+;**************************************

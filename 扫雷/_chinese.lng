@@ -1,0 +1,465 @@
+;This is a Minesweeper Arbiter 0.43 demo2 Language File
+;Language name: Chinese
+;Language ID: CHN
+;Last Modified: 2:51 28.11.2005
+;File Version: 1.24.DEBUG
+;Total Entries: 4xx (374)
+;current task - group all entries!
+;
+;Rules
+;lines that starts with ";" "/" "[" ignored
+;lines with length < 3 ignored
+;lines without "=" ignored
+;lines with unknown command like xxxx=<text> ignored
+;lines with empty value like 0000=<empty> ignored too
+;any other wrong lines ignored as well
+;missed text lines are replaced with default
+;-----
+;If you want to translate program to YOUR language:
+;1) translate ONLY TEXT LINES like xxxx=<text>
+;2) rename file as "_<your_language_name>.lng"
+;3) for further understanding you may mark 
+;   default values with ";" symbol and 
+;   lower/upper write command on your language
+;4) please, note - your strings are limited with control's width!!!
+;5) be sure all the translated text is visible
+;6) send file to the Minesweeper Arbiter development staff
+;7) get YOUR NAME in the translation team list
+;
+;   thank you!
+;-------------
+[global]
+0357=If you wish to translate program to Your language, please, see instructions inside the language file.
+
+[lhs_gain]
+;0007=game win at
+0383=保存这局雷图
+0384=恭喜打破
+0385=成绩
+
+[functions_unit]
+;0008=sec
+;0009=blast
+;0010=godmode .. on .. awakening!
+
+[multiplayer unit]
+0011=无法连接
+0012=端口
+0013=姓名
+0014=IP
+0015=Host Session
+0016=连接
+0017=断开
+0018=joined
+0019=Multiplayer Mod
+
+[progressbar]
+0020=回放进程控制条
+
+[about]
+0021=关于
+
+[counters]
+0022=左键
+0023=右键
+0024=双键
+0025=3BV
+;done-->
+0026=/
+0027=3BV/s
+0028=时间
+0029=保存录像文件
+0030=已保存
+
+[custommode]
+0031=自定义设置
+0032=宽
+0033=高
+0034=雷数
+0035=取消
+0036=同意
+
+0295=保存
+0296=载入
+0297=删除
+
+
+0037=默认值:
+0038=8 x 8 , 10 雷
+0039=16 x 16 , 40 雷
+0040=30 x 16 , 99 雷
+0041=自定义模式已排除
+0042=图宽度必须是整数8..30
+0043=图高度必须是整数8..30
+0044=图雷数必须是整数且雷密度必须在1..90%
+;0045=custom mode selected
+
+[debug]
+0046=调试协议
+0047=清空
+0048=保存
+0049=字体
+0050=Command [Enter]
+0051=关闭
+;0052=protocol cleared
+;0053=protocol save ok
+;0054=protocol save error
+
+[debug_command]
+0055=Debug Command
+
+[history_window]
+0056=数据
+0057=SAVE GRID
+0058=保存完整数据到HTML文件
+0260=Save Statistics (no debug) to HTML-file
+0059=恢复数据库
+0060=保存数据库
+0061=清空数据库
+0062=初级
+0063=时间排行
+0064=3BV/s排行
+0065=时间一览
+0066=3BV/s一览
+0067=3BV一览
+0068=风格图表
+0262=等级图表
+0407=进步历程
+0400=每日数据
+0069=中级
+0070=高级
+0071=总风格图表
+0263=所有游戏图表
+0072=游戏时间分布
+0073=全部游戏数据
+0074=设置
+0275=搜索
+0075=初级一览
+0076=初级时间榜
+0077=初级3BV/s榜
+0078=初级时间一览
+0079=初级3BV/s一览
+0080=初级3BV一览
+0404=初级进步历程
+0401=初级每日数据
+0081=初级风格图表
+0082=中级一览
+0083=中级时间榜
+0084=中级3BV/s榜
+0085=中级时间一览
+0086=中级3BV/s一览
+0087=中级3BV一览
+0405=中级进步历程
+0402=中级每日数据
+0088=中级风格图表
+0089=高级一览
+0090=高级时间榜
+0091=高级3BV/s榜
+0092=高级时间一览
+0093=高级3BV/s一览
+0094=高级3BV一览
+0406=高级进步历程
+0403=高级每日数据
+0095=高级风格图表
+0096=综合风格图表
+0097=所有游戏活动
+0098=Entire Statistics (debug info)
+0099=飞标风格
+0000=盲扫风格
+0101=File copy error
+0102=Backup file:
+0103=这将会删除所有数据，你确定吗？
+0104=为了正确的画出饼状图，当几项数值相同时，其中一项会加1。
+0106=Not history file / file corrupted
+0107=History file restored. Please, reopen statistics window
+0108=History is empty. You need to win a game first :-)
+
+[local_high_scores]
+0109=本地记录一览
+
+[options]
+0119=设置
+0120=默认
+0121=取消
+0122=同意
+0123=玩家设置
+0124=游戏设置
+0125=作弊模式
+0126=系统设置
+0127=语言设置
+0128=自动化设置
+0129=多人设置
+0130=玩家设置
+0131=游戏风格设置
+0132=作弊模式设置
+0133=系统设置
+0134=语言设置
+0135=自动保存设置
+0136=多人游戏设置
+
+0310=计数器设置
+0331=IRC脚本设置
+0359=Replay Mouse Chart Setup
+
+0137=显示玩家身份标识
+0252=录像玩家姓名
+0254=默认录像文件名
+0253=国家
+0255=模式名称
+0138=记录游戏数据（推荐）
+0139=初始模式:
+0140=初级
+0141=中级
+0142=高级
+0143=皮肤
+0144=计时器皮肤:
+0145=可以标记问号（不推荐）
+0146=计时器显示小数
+0147=显示计数器
+0148=左键双击自动重开（不推荐）
+0149=触雷自动重开（推荐）
+0150=中键重开
+0265=完成一局后标上所有的雷
+0151=禁用计时器
+0152=记录风格计时器
+0153=游戏开始自动设雷
+0154=禁用双键多开
+0155=禁用右键
+0156=无限生命
+0157=显示雷的概率
+0158=游戏开始后显示3BV
+0159=图里一定有数字7
+0160=图里一定有数字8
+
+0161=3BV小于等于
+0356=3BV大于等于
+
+0162=Attempts 1000 *
+0163=设置高进程优先级（推荐）
+0266=使用像素渲染（推荐）
+0164=激活老板键[Alt+F2]
+0165=鼠标指针不能超出边框
+0166=永远最前
+0167=允许开多个仲裁者
+0168=Justify Arbiter Windows by Center
+0169=Register Arbiter Video File (AVF) Extension
+0170=Put Shortcut to the Desktop
+0171=Please, Select Your Language
+0172=自动存录像（推荐）
+0175=Check These Options on Your Own Risk !
+0176=Block Incoming Chat Messages
+0177=Allow List of Processes Grab
+0178=Allow System Information Grab
+0179=You could not save replay files in Cheat Mode
+0180=Please, read the Readme file for more automatic saving template explanations
+
+[functions]
+0276=CLEAR
+0277=SORT BY
+0181=AVF extension registration done
+0182=Registry Access Failure
+0183=History file manual corruption detected
+0184=History file recreated
+0185=History file corrupted. File has been renamed to "history_corrupt_<date>.dat"
+0186=Beg
+0187=Int
+0188=Exp
+0189=All
+0190=Avg
+0191=Value
+0192=Date
+0193=Hour
+0261=Week
+0264=Month
+0194=3BV
+0195=3BV/s
+0196=Time
+0197=Games Total
+0198=Flag
+0199=Non-Flag
+0200=Full Time
+0201=Best  Time
+0202=Avg   Time
+0203=Worst Time
+0204=Best  3BV/s
+0205=Avg   3BV/s
+0206=Worst 3BV/s
+0207=Best  3BV
+0208=Avg   3BV
+0209=Worst 3BV
+0210=Style
+0211=Total
+0212=3BV/s Min
+0213=3BV/s Max
+0214=3BV/s Avg
+0215=3BV Min
+0216=3BV Avg
+0217=3BV Max
+0218=Time Min
+0219=Time Avg
+0220=Time Max
+0221=Percents
+0222=Games
+0223=Total Time
+0224=Mode
+0225=Both
+
+[main_window]
+0226=游戏
+0227=新游戏
+0408=重开
+0228=打开录像
+0229=多人磨具
+0230=初级
+0231=中级
+0232=高级
+0233=自定义局
+0234=本地记录
+0235=数据
+0236=老板键
+0237=退出
+0238=选项
+0239=设置
+0241=语言设置
+0242=显示核算数据
+0243=显示计数器
+0267=IRC功能
+0268=复制上局数据
+
+0274=通过局ID复制数据
+0244=截图
+0245=JPD截图
+0246=BMP截图
+0247=全屏截图
+0248=组织
+0249=这是啥
+0250=目录
+0251=仲裁者相关
+
+0278=Sorting in large tables may be slow
+0279=Table contains more than 1000 rows, and sorting may take a few minutes. Continue?
+0280=Load External History File (.DAT or .INF)
+0281=External History File Load Success
+
+0282=在数据表中显示平局
+
+0283=鼠标设置
+0284=增加灵敏度
+0285=减少灵敏度
+0286=鼠标移速
+0287=打开鼠标控制盘
+
+0288=显示雷的位置
+
+0289=文件未选中
+0290=无法保存文件
+0291=无法载入文件
+0292=无法创建文件夹
+0293=无法载入文件夹
+0294=删除文件
+
+0298=保存自定义图
+0299=载入自定义图
+
+0300=搜索插件（可能很慢）
+0303=插件
+
+
+0304=打开
+0305=游戏文件夹
+0306=截图文件夹
+0307=图文件夹
+0308=图礼物文件夹
+0309=插件文件夹
+
+0311=列宽度
+0312=Counter Indicators Template
+0313=Read the Help file about the Counter Window Indicator's templates
+
+0314=显示计数器的窗口标题
+
+0315=计数器
+0316=Counters
+
+0317=添加公式
+
+[formula builder]
+0318=Counter Indicator Template Formula Builder
+0319=Help
+0322=Clear
+0323=Undo
+0324=Indicator Name
+0326=Formula Operations
+0327=# - Text
+0328=@ - Previous Formula
+
+0329=Save template file first?
+
+0240=Board saved to
+
+0332=Format
+0333=Colors
+0334=自动从计数器复制触雷数据
+0335=自动从计数器复制扫开数据
+0336=列出数据数量
+
+0337=复制信息
+0338=回放
+
+0339=把图存为BMP
+0340=把图存为TXT
+
+0341=飞标
+0342=盲扫
+
+0343=th
+0344=st
+0345=nd
+0346=rd
+
+0347=复制时间记录信息
+0348=复制3BV/s记录信息
+0349=复制平均数据
+0350=复制今日初级信息
+0351=复制今日中级信息
+0352=复制今日高级信息
+0353=IRC文本格式
+
+0354=游戏结束绿色提示
+0355=游戏过程中显示计时器
+
+0358=画鼠标轨迹图
+
+0360=使用暗色皮肤
+0361=显示数字
+0362=显示鼠标轨迹
+0363=点击时鼠标轨迹高亮
+0364=显示左键点击
+0365=显示右键点击
+0366=显示双键点击
+0367=Mouse Cursor Path Color
+0368=Left Clicks Color
+0369=Right Clicks Color
+0370=Double Clicks Color
+
+0371=重新载入
+0372=根据时间强制重开
+0373=时间超过警告
+
+0374=改变图存储路径
+
+0375=Silent Mode Output
+
+0376=Fill
+
+0377=使用小数点分隔数据
+
+0378=Number of Indices
+
+0379=游戏完成时显示计数器
+0380=游戏结束时显示计数器
+
+0381=在IRC报告中使用随机微笑
+
+0382=游戏中计算计数器数据
+;end of file
