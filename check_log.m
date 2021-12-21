@@ -7,4 +7,8 @@ figure;histogram(diff(right_index));title('ISI')
 disp(['胜率为',num2str(per*100),'%'])
 
 figure;
-plot(1:length(a),cumsum(a)./(1:length(a))','x-');title('胜率走势')
+plot(1:length(a),cumsum(a)./(1:length(a))','x-');
+title('Winning Rate vs Time')
+xlabel('Number of trial')
+ylabel('Winning Rate')
+yline(0.35,'r--')

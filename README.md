@@ -1,10 +1,11 @@
 # myMineSweeperAI
-Playing Minesweeper itself
-
+Playing Minesweeper itself  
+![avatar](./screenshot_win.jpg)
 ## Overview
 - Minesweeper Version: Minesweeper Arbiter 0.52 distribution
 - Time for each game: about 30s
-- Winning Rate: 30-45%
+- Win Rate: 35%  
+![avatar](./win_rate.png)
 - Algorithm: clicking the block that is least likely to be bomb.
 
 ## How to use it?
