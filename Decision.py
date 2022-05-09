@@ -6,6 +6,7 @@ import UpdateFrame
 import matplotlib.pyplot as plt
 import scipy.optimize
 
+
 # 0: 空
 # -1: 未占据
 # 1-8:雷数
@@ -113,7 +114,7 @@ def deep_calcalating(mine_fields):
     y = np.reshape(np.array(y), (-1, 1))
     np.savetxt('x.csv', x, delimiter=",")
     np.savetxt('y.csv', y, delimiter=",")
-    f = open('info.txt','w')
+    f = open('info.txt', 'w')
     f.write('1')
     f.close()
     # # output_possibility = np.matmul(np.linalg.pinv(x), y)
@@ -139,22 +140,7 @@ def deep_calcalating(mine_fields):
     # print(output_possibility)
     # output_possibility = output_possibility.reshape((-1,))
     while True:
-        f = open('info.txt','r')
-        a = f.read()
-        if a == '0':
-            f.close()
-            break
-        f.close()
-    output_possibility = np.loadtxt('output.csv',delimiter=",")
-
-    ind_bomb = np.argwhere(output_possibility > 0.999)
-    ind_safe = np.argwhere(output_possibility < 0.001)
-    if np.size(ind_safe) == 0:
-        f = open('info.txt', 'w')
-        f.write('2')
-        f.close()
-    while True:
-        f = open('info.txt','r')
+        f = open('info.txt', 'r')
         a = f.read()
         if a == '0':
             f.close()
@@ -162,37 +148,54 @@ def deep_calcalating(mine_fields):
         f.close()
     output_possibility = np.loadtxt('output.csv', delimiter=",")
 
+    ind_bomb = np.argwhere(output_possibility > 0.999)
+    ind_safe = np.argwhere(output_possibility < 0.001)
+    if np.size(ind_safe) == 0:
+        f = open('info.txt', 'w')
+        f.write('2')
+        f.close()
+        while True:
+            f = open('info.txt', 'r')
+            a = f.read()
+            if a == '0':
+                f.close()
+                break
+            f.close()
+        output_possibility = np.loadtxt('output.csv', delimiter=",")
+
     output = []
     for k in range(np.size(ind_safe)):
         temp_k, temp_j = blank_fields[round(ind_safe[k, 0])]
         print(temp_k, temp_j, output_possibility[round(ind_safe[k, 0])])
         output.append((temp_k, temp_j, 'left_click'))
-    # for k in range(np.size(ind_bomb)):
-    #     temp_k, temp_j = blank_fields[round(ind_bomb[k,0])]
-    #     print(temp_k, temp_j, output_possibility[round(ind_bomb[k, 0])])
-    #     output.append((temp_k, temp_j, 'right_click'))
+    for k in range(np.size(ind_bomb)):
+        temp_k, temp_j = blank_fields[round(ind_bomb[k, 0])]
+        print(temp_k, temp_j, output_possibility[round(ind_bomb[k, 0])])
+        output.append((temp_k, temp_j, 'right_click'))
     if len(output) > 0:
         return output
-    else:
-        if len(output) == 30*16:
-            return [(0, 0, 'left_click')]
+    elif len(output_possibility) > 0:
         ind_minp = np.argmin(output_possibility)
         temp_k, temp_j = blank_fields[ind_minp]
         print(temp_k, temp_j, output_possibility[ind_minp])
         return [(temp_k, temp_j, 'left_click')]
+    else:
+        return []
+
 
 def start_game(mine_fields, rect):
-    if np.sum(mine_fields!=-1) <= 3:
-        if mine_fields[0,0]==-1:
-            myMouse.click(rect,0,0,'left_click')
-        elif mine_fields[0,29]==-1:
-            myMouse.click(rect,0,29,'left_click')
-        elif mine_fields[15,0]==-1:
-            myMouse.click(rect,15,0,'left_click')
+    if np.sum(mine_fields != -1) <= 3:
+        if mine_fields[0, 0] == -1:
+            myMouse.click(rect, 0, 0, 'left_click')
+        elif mine_fields[0, 29] == -1:
+            myMouse.click(rect, 0, 29, 'left_click')
+        elif mine_fields[15, 0] == -1:
+            myMouse.click(rect, 15, 0, 'left_click')
         else:
-            myMouse.click(rect,15, 29,'left_click')
+            myMouse.click(rect, 15, 29, 'left_click')
         return True
     return False
+
 
 def next_move(mine_fields, rect):
     if not isGoodGame(mine_fields):
@@ -240,6 +243,7 @@ def next_move(mine_fields, rect):
     # rand_k, rand_j = randomChoose(mine_fields)
     # myMouse.click(rect, k, j, 'left_click')
     return 1
+
 
 if __name__ == '__main__':
     hwnd = UpdateFrame.get_screenshot()

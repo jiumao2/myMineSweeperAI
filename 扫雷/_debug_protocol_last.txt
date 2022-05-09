@@ -1,15 +1,18 @@
-14:32:09:140 preferences saved
-14:23:07:971 ---
-14:23:07:970 who of them got the skills to test me?
-14:23:07:970 ---
-14:23:07:969 warp field stabilized. opening gate to the minesweeper world
-14:23:07:968 encrypt_engine test ok
-14:23:07:968 encrypt_engine testing ...
-14:23:07:967 ---
-14:23:07:966 language  | 00000804
-14:23:07:966 timezone  | 中国标准时间 (GMT +8:00)
-14:23:07:966 platform  | Windows NT 6.2 build 9200, 
-14:23:07:966 memory    | 2047,0 of 2047,0 MB RAM free
-14:23:07:965 cpu speed | run the command get_cpu_speed
-14:23:07:964 date      | Tue, 21.12.2021, process 0x000B0424 launched
-14:23:07:960 path      | C:\USERS\JIUMAO\DESKTOP\PROJECTS\MYMINESWEEPERAI\MYMINESWEEPERAI\扫雷\
+10:58:22:870 preferences saved
+01:35:15:202 high score replay automatically saved
+01:30:34:440 high score replay automatically saved
+01:25:37:025 high score replay automatically saved
+00:52:14:534 ---
+00:52:14:533 who of them got the skills to test me?
+00:52:14:533 ---
+00:52:14:532 warp field stabilized. opening gate to the minesweeper world
+00:52:14:532 encrypt_engine test ok
+00:52:14:531 encrypt_engine testing ...
+00:52:14:531 ---
+00:52:14:531 language  | 00000804
+00:52:14:529 timezone  | 中国标准时间 (GMT +8:00)
+00:52:14:528 platform  | Windows NT 6.2 build 9200, 
+00:52:14:528 memory    | 2047,0 of 2047,0 MB RAM free
+00:52:14:527 cpu speed | run the command get_cpu_speed
+00:52:14:527 date      | Wed, 02.03.2022, process 0x00090818 launched
+00:52:14:509 path      | C:\USERS\JIUMAO\DESKTOP\PROJECTS\MYMINESWEEPERAI\MYMINESWEEPERAI\扫雷\

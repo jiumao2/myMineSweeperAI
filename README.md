@@ -4,14 +4,14 @@ Playing Minesweeper itself
 ## Overview
 - Minesweeper Version: Minesweeper Arbiter 0.52 distribution
 - Time for each game: about 30s
-- Win Rate: 35%  
+- Win Rate: 32.5%  
 ![avatar](./win_rate.png)
 - Algorithm: clicking the block that is least likely to be bomb.
 
 ## How to use it?
 1. Install MATLAB and Python with proper environment.
 2. Open .\扫雷\ms_arbiter.exe
-3. Run next_move.m & get_possibility.m & UpdateFrame.py
+3. Run next_move.m & UpdateFrame.py
 4. Stop running by Middle-Click with your mouse
 5. The outcome would be saved in log.txt. Each 0 denotes failure of 1 game and 1 denotes success of 1 game.
 6. Run check_log.m to check the statistics of performance
