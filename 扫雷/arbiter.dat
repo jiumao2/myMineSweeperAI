@@ -1,6 +1,6 @@
 ;Minesweeper Arbiter (Version 0.52.3)
 ;Configuration File
-;Saved Wed, 02 mar 2022 at 10_58_22
+;Saved Sat, 11 jun 2022 at 14_46_11
 ;Read-only! Manual edition prohibited!
 
 [GLOBALS]
@@ -15,12 +15,12 @@ TextHistorySaveWins=0
 TextHistorySaveBlasts=0
 TextHistorySaveF2s=0
 LastPath="C:\USERS\JIUMAO\DESKTOP\PROJECTS\MYMINESWEEPERAI\MYMINESWEEPERAI\É¨À×\"
-posMainX=1129
-posMainY=233
+posMainX=1173
+posMainY=340
 posCountersX=1446
 posCountersY=832
-posProgressBarX=0
-posProgressBarY=0
+posProgressBarX=689
+posProgressBarY=186
 posHistX=0
 posHistY=0
 posHistW=800
