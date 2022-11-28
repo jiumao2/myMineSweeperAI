@@ -1,10 +1,10 @@
 import numpy as np
-import myMouse
+import myIO
 import random
 import time
-import UpdateFrame
 import matplotlib.pyplot as plt
 import scipy.optimize
+import hyperparams as p
 
 
 # 0: 空
@@ -73,20 +73,27 @@ def getBlankFields(mine_fields, k, j):
 
 def randomChoose(mine_fields):
     blank_fields = []
-    for k in range(16):
-        for j in range(30):
-            if mine_fields[k, j] <= 0:
+    for k in range(np.size(mine_fields,0)):
+        for j in range(np.size(mine_fields,1)):
+            if mine_fields[k, j] < 0:
                 blank_fields.append((k, j))
     return random.choice(blank_fields)
 
-
-def deep_calcalating(mine_fields):
-    blank_fields_order = np.zeros((16, 30))
+def normal(mine_fields):
+    height = np.size(mine_fields,0)
+    width = np.size(mine_fields,1)
+    
+    blank_fields_order = np.zeros((height, width))
     blank_fields = []
     count = 0
-    total_bomb = 99
-    for k in range(16):
-        for j in range(30):
+    if p.mode == 'Beginner':
+        total_bomb = 10
+    elif p.mode == 'Intermediate':
+        total_bomb = 40
+    elif p.mode == 'Expert':
+        total_bomb = 99
+    for k in range(np.size(mine_fields,0)):
+        for j in range(np.size(mine_fields,1)):
             if mine_fields[k, j] == -1:
                 blank_fields.append((k, j))
                 blank_fields_order[k, j] = count
@@ -95,8 +102,71 @@ def deep_calcalating(mine_fields):
                 total_bomb -= 1
     x = np.ones((1, count))
     y = [total_bomb]
-    for k in range(16):
-        for j in range(30):
+    for k in range(np.size(mine_fields,0)):
+        for j in range(np.size(mine_fields,1)):
+            if mine_fields[k, j] >= 1 and mine_fields[k, j] <= 8:
+                mine_num = mine_fields[k, j]
+                mines_around = getFieldsAround(mine_fields, k, j)
+                temp_x = np.zeros((1, count))
+                to_stack = False
+                for temp_k, temp_j in mines_around:
+                    if mine_fields[temp_k, temp_j] == -1:
+                        to_stack = True
+                        temp_x[0, round(blank_fields_order[temp_k, temp_j])] = 1
+                    elif mine_fields[temp_k, temp_j] == 9:
+                        mine_num -= 1
+                if to_stack:
+                    x = np.concatenate((x, temp_x), axis=0)
+                    y.append(mine_num)
+
+    output_possibility = np.matmul(np.linalg.pinv(x), y)
+
+    ind_bomb = np.argwhere(output_possibility > 0.999)
+    ind_safe = np.argwhere(output_possibility < 0.001)
+
+    output = []
+    for k in range(np.size(ind_safe)):
+        temp_k, temp_j = blank_fields[round(ind_safe[k, 0])]
+        output.append((temp_k, temp_j, 'left_click'))
+    for k in range(np.size(ind_bomb)):
+        temp_k, temp_j = blank_fields[round(ind_bomb[k, 0])]
+        output.append((temp_k, temp_j, 'right_click'))
+    if len(output) > 0:
+        return output
+    elif len(output_possibility) > 0:
+        ind_minp = np.argmin(output_possibility)
+        temp_k, temp_j = blank_fields[ind_minp]
+        return [(temp_k, temp_j, 'left_click')]
+    else:
+        return []    
+
+
+def deep_calcalating(mine_fields):
+    height = np.size(mine_fields,0)
+    width = np.size(mine_fields,1)
+    
+    blank_fields_order = np.zeros((height, width))
+    blank_fields = []
+    count = 0
+    if p.mode == 'Beginner':
+        total_bomb = 10
+    elif p.mode == 'Intermediate':
+        total_bomb = 40
+    elif p.mode == 'Expert':
+        total_bomb = 99
+        
+    for k in range(np.size(mine_fields,0)):
+        for j in range(np.size(mine_fields,1)):
+            if mine_fields[k, j] == -1:
+                blank_fields.append((k, j))
+                blank_fields_order[k, j] = count
+                count += 1
+            elif mine_fields[k, j] == 9:
+                total_bomb -= 1
+    x = np.ones((1, count))
+    y = [total_bomb]
+    for k in range(np.size(mine_fields,0)):
+        for j in range(np.size(mine_fields,1)):
             if mine_fields[k, j] >= 1 and mine_fields[k, j] <= 8:
                 mine_num = mine_fields[k, j]
                 mines_around = getFieldsAround(mine_fields, k, j)
@@ -117,28 +187,7 @@ def deep_calcalating(mine_fields):
     f = open('info.txt', 'w')
     f.write('1')
     f.close()
-    # # output_possibility = np.matmul(np.linalg.pinv(x), y)
-    # fun = lambda t: np.linalg.norm(t)
-    # cons = ()
-    # print(x.shape)
-    # print(y.shape)
-    # x0 = 0.3 * np.ones((np.size(x, 1), 1))  # 设置初始值
-    # print(x0.shape)
-    # for k in range(np.size(x,1)):
-    #     temp = ({'type': 'ineq', 'fun': lambda t: t[k]},)  # x>=e，即 x > 0
-    #     cons = cons + temp
-    # for k in range(np.size(x,0)):
-    #     temp = ({'type': 'eq', 'fun': lambda t: np.matmul(x[k,:],t)-y[k,:]},)
-    #     cons = cons + temp
-    # print(cons)
-    #
-    #
-    # res = scipy.optimize.minimize(fun, x0, constraints=cons)
-    # print(res)
-    # output_possibility = res.x
-    # print(np.matmul(x[0,:],output_possibility)-y[0,:])
-    # print(output_possibility)
-    # output_possibility = output_possibility.reshape((-1,))
+
     while True:
         f = open('info.txt', 'r')
         a = f.read()
@@ -166,33 +215,32 @@ def deep_calcalating(mine_fields):
     output = []
     for k in range(np.size(ind_safe)):
         temp_k, temp_j = blank_fields[round(ind_safe[k, 0])]
-        print(temp_k, temp_j, output_possibility[round(ind_safe[k, 0])])
         output.append((temp_k, temp_j, 'left_click'))
     for k in range(np.size(ind_bomb)):
         temp_k, temp_j = blank_fields[round(ind_bomb[k, 0])]
-        print(temp_k, temp_j, output_possibility[round(ind_bomb[k, 0])])
         output.append((temp_k, temp_j, 'right_click'))
     if len(output) > 0:
         return output
     elif len(output_possibility) > 0:
         ind_minp = np.argmin(output_possibility)
         temp_k, temp_j = blank_fields[ind_minp]
-        print(temp_k, temp_j, output_possibility[ind_minp])
         return [(temp_k, temp_j, 'left_click')]
     else:
         return []
 
 
 def start_game(mine_fields, rect):
+    y_max = np.size(mine_fields,1)-1
+    x_max = np.size(mine_fields,0)-1
     if np.sum(mine_fields != -1) <= 3:
         if mine_fields[0, 0] == -1:
-            myMouse.click(rect, 0, 0, 'left_click')
-        elif mine_fields[0, 29] == -1:
-            myMouse.click(rect, 0, 29, 'left_click')
-        elif mine_fields[15, 0] == -1:
-            myMouse.click(rect, 15, 0, 'left_click')
+            myIO.click(rect, 0, 0, 'left_click')
+        elif mine_fields[0, y_max] == -1:
+            myIO.click(rect, 0, y_max, 'left_click')
+        elif mine_fields[x_max, 0] == -1:
+            myIO.click(rect, x_max, 0, 'left_click')
         else:
-            myMouse.click(rect, 15, 29, 'left_click')
+            myIO.click(rect, x_max, y_max, 'left_click')
         return True
     return False
 
@@ -200,53 +248,50 @@ def start_game(mine_fields, rect):
 def next_move(mine_fields, rect):
     if not isGoodGame(mine_fields):
         print('Failed! Click any button to restart!')
-        # os.system('Pause')
         return 0
 
     if isComplete(mine_fields, rect):
-        # os.system('pause')
-        myMouse.click(rect, 0, 0, 'restart')
         return 2
-
-    # # Naive Mine Sweeper
-    # flag = False
-    # for k in range(16):
-    #     for j in range(30):
-    #         if mine_fields[k, j] >= 1 and mine_fields[k, j] <= 8:
-    #             remain_mines, blank_fields = getBlankFields(mine_fields, k, j)
-    #             if remain_mines == 0 and len(blank_fields) > 0:
-    #                 for temp_k, temp_j in blank_fields:
-    #                     myMouse.click(rect, temp_k, temp_j, 'left_click')
-    #                 flag = True
-    #             elif remain_mines > 0 and remain_mines == len(blank_fields):
-    #                 for temp_k, temp_j in blank_fields:
-    #                     myMouse.click(rect, temp_k, temp_j, 'right_click')
-    #                     mine_fields[temp_k, temp_j] = 9
-    #                 flag = True
-    #
-    #             elif remain_mines > len(blank_fields):
-    #                 print('Something must be wrong!')
-    #                 # os.system('Pause')
-    #                 # time.sleep(3)
-    #                 return 0
-    #                 myMouse.click(rect, 0, 0, 'restart')
-    #
-    # if flag:
-    #     return 1
+    
     if start_game(mine_fields, rect):
         return 1
 
-    output = deep_calcalating(mine_fields)
-    for k, j, click_type in output:
-        myMouse.click(rect, k, j, click_type)
+    # Naive Mine Sweeper
+    if p.algorithm == 'naive':
+        flag = False
+        for k in range(np.size(mine_fields,0)):
+            for j in range(np.size(mine_fields,1)):
+                if mine_fields[k, j] >= 1 and mine_fields[k, j] <= 8:
+                    remain_mines, blank_fields = getBlankFields(mine_fields, k, j)
+                    if remain_mines == 0 and len(blank_fields) > 0:
+                        for temp_k, temp_j in blank_fields:
+                            myIO.click(rect, temp_k, temp_j, 'left_click')
+                        flag = True
+                    elif remain_mines > 0 and remain_mines == len(blank_fields):
+                        for temp_k, temp_j in blank_fields:
+                            myIO.click(rect, temp_k, temp_j, 'right_click')
+                            mine_fields[temp_k, temp_j] = 9
+                        flag = True
 
-    # rand_k, rand_j = randomChoose(mine_fields)
-    # myMouse.click(rect, k, j, 'left_click')
+                    elif remain_mines > len(blank_fields):
+                        print('Something must be wrong!')
+                        return 0
+        if flag:
+            return 1
+        else:
+            k, j = randomChoose(mine_fields)
+            myIO.click(rect, k, j, 'left_click') 
+    elif p.algorithm == 'normal':
+        output = normal(mine_fields)
+        if len(output) == 0:
+            k, j = randomChoose(mine_fields)
+            myIO.click(rect, k, j, 'left_click')
+        else:
+            for k, j, click_type in output:
+                myIO.click(rect, k, j, click_type)                        
+    elif p.algorithm == 'deep':       
+        output = deep_calcalating(mine_fields)
+        for k, j, click_type in output:
+            myIO.click(rect, k, j, click_type)
+
     return 1
-
-
-if __name__ == '__main__':
-    hwnd = UpdateFrame.get_screenshot()
-    rect = UpdateFrame.get_position(hwnd)
-    mine_field = UpdateFrame.process_screenshot()
-    output = deep_calcalating(mine_field)
