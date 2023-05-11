@@ -1,6 +1,6 @@
 ;Minesweeper Arbiter (Version 0.52.3)
 ;Configuration File
-;Saved Sat, 17 dec 2022 at 17_27_08
+;Saved Thu, 11 may 2023 at 19_06_12
 ;Read-only! Manual edition prohibited!
 
 [GLOBALS]
@@ -15,12 +15,12 @@ TextHistorySaveWins=0
 TextHistorySaveBlasts=0
 TextHistorySaveF2s=0
 LastPath="C:\USERS\JIUMAO\DESKTOP\PROJECTS\MYMINESWEEPERAI\MYMINESWEEPERAI\MINESWEEPER\"
-posMainX=1024
-posMainY=303
-posCountersX=1446
-posCountersY=832
-posProgressBarX=689
-posProgressBarY=186
+posMainX=100
+posMainY=155
+posCountersX=371
+posCountersY=95
+posProgressBarX=0
+posProgressBarY=0
 posHistX=0
 posHistY=0
 posHistW=800
@@ -42,11 +42,11 @@ hsExp3bvs=999,99
 
 [PLAYER]
 ShowIDText=1
-UserIDText=Yue Huang! Press F5 for Setup
+UserIDText=Anonymous! Press F5 for Setup
 doHistoryLog=1
 doDotSeparator=1
 doCalculateCounters=1
-ReplayName=Yue Huang
+ReplayName=Anonymous
 BegName=Beg
 IntName=Int
 ExpName=Exp
@@ -112,8 +112,8 @@ widthCr1=60
 widthCr2=68
 heightCr3=26
 doShowCounters=0
-doShowCountersTitle=0
-doShowCntGreenBorder=0
+doShowCountersTitle=1
+doShowCntGreenBorder=1
 doCountersOnFinish=0
 doCountersOnEnd=0
 
@@ -148,5 +148,5 @@ mpRColor=8
 mpDColor=7
 
 [ENCRYPT]
-csO=14012420
+csO=14274420
 ;END
