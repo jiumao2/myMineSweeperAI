@@ -1,7 +1,17 @@
 from time import sleep
 import win32api
 import win32con
+import win32gui
+import win32print
 import hyperparams as p
+
+wide_real = win32print.GetDeviceCaps(win32gui.GetDC(0), win32con.DESKTOPHORZRES)
+wide_screen = win32api.GetSystemMetrics(0)
+proportion = wide_real/wide_screen
+
+block_length = round(16*proportion)
+offset_x = round(20*proportion)
+offset_y = round(110*proportion)
 
 def space():
     win32api.keybd_event(32, 0, 0, 0)
@@ -46,10 +56,6 @@ def double_click(x, y):
 
 
 def click(rect, block_row=0, block_col=0, type='left_click'):
-    block_length = 24
-    offset_x = 30
-    offset_y = 165
-
     if type == 'restart':
         left_click(rect[0] + 250, rect[1] + 110)
     elif type == 'left_click':
